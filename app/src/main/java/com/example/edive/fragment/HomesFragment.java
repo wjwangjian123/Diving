@@ -22,6 +22,7 @@ import com.example.edive.activity.IntegralActivity;
 import com.example.edive.activity.MainActivity;
 import com.example.edive.activity.RestorationActivity;
 import com.example.edive.activity.TopicDetailsActivity;
+import com.example.edive.activity.hotel.HotelReservationActivity;
 import com.example.edive.adapter.RlvHomeChildAdapter;
 import com.example.edive.adapter.RlvHomesAdapter;
 import com.example.edive.adapter.VpHomeTabAdapter;
@@ -219,7 +220,7 @@ public class HomesFragment extends BaseMvpFragment<HomeModel> {
                 startActivity(new Intent(getActivity(), RestorationActivity.class));
                 break;
             case R.id.iv_integral:
-                startActivity(new Intent(getActivity(), IntegralActivity.class));
+                startActivity(new Intent(getActivity(), HotelReservationActivity.class));
                 break;
             case R.id.iv_apply:
                 startActivity(new Intent(getActivity(), CoachApplicationActivity.class));

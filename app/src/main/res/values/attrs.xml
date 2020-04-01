@@ -154,4 +154,11 @@
             <enum name="RECT" value="1"></enum>
         </attr>
     </declare-styleable>
+
+        <!--自定义圆角效果-->
+        <declare-styleable name="FilletView">
+            <attr name="edgeColor" format="color" />
+            <attr name="angle" format="dimension" />
+        </declare-styleable>
+
 </resources>

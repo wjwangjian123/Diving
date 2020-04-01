@@ -14,11 +14,11 @@ android {
             abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
         }
         manifestPlaceholders = [
-                XG_ACCESS_ID:"1500003652",
-                XG_ACCESS_KEY : "AF5MWNPDSHNZ",
-                JPUSH_PKGNAME :"com.example.edive",
+                XG_ACCESS_ID : "1500003652",
+                XG_ACCESS_KEY: "AF5MWNPDSHNZ",
+                JPUSH_PKGNAME: "com.example.edive",
                 JPUSH_APPKEY : "a1a1b58ce3ec35a95dab1858", //JPush 上注册的包名对应的 Appkey.
-                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
     }
 
