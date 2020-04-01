@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Setting_bg"
+    android:layout_height="match_parent"
+    tools:context=".activity.DiveLogActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.example.edive.design.CommonTitle
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:canBack="true"
+            app:backImage="@mipmap/icon_back"
+            app:titleText="添加日志"
+            />
+
+        <android.support.design.widget.TabLayout
+            android:layout_marginTop="@dimen/dp_1"
+            android:id="@+id/dive_log_tab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginLeft="@dimen/dp_11"
+            android:layout_marginRight="@dimen/dp_11"
+            app:tabBackground="@drawable/dive_log_selector_tab"
+            app:tabIndicatorHeight="@dimen/dp_0"
+            app:tabSelectedTextColor="@color/c_ffffff"
+            app:tabTextColor="@color/c_000000" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/dive_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</LinearLayout>

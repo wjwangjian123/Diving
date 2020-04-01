@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.edive">
+     <!--Required -->
+    <permission android:name="com.example.edive.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature"
+        />
+    <uses-permission android:name="com.example.edive.permission.JPUSH_MESSAGE" />
+
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!--设置休眠时间-->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
+    <uses-permission android:name="android.permission.CLEAR_APP_DATA" />
+    <uses-permission android:name="android.permission.BLUETOOTH" /> <!-- 震动权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" /> <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.SEND_DOWNLOAD_COMPLETED_INTENTS" />
+
+    <application
+        android:name=".frame.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/MyTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute"
+        tools:replace="android:theme">
+        <activity android:name=".activity.ShowVideoActivity"></activity>
+        <activity android:name=".activity.AllraiseMessagerListActivity" />
+        <activity android:name=".activity.UserPersonDestialsActivity" />
+        <activity android:name=".activity.IntegralExchangeActivity" />
+        <activity android:name=".activity.AllPersonalDataActivity" />
+        <activity android:name=".activity.ShowPhotoActivity" />
+        <activity android:name=".activity.UpdateMyTextActivity" />
+        <activity android:name=".activity.UpdateNameActivity" />
+        <activity android:name=".activity.SuggestionsActivity" />
+        <activity android:name=".activity.ChooesAddaressActivity" />
+        <activity android:name=".activity.FeedbackActivity" />
+        <activity android:name=".activity.ChooesConversationActivity" />
+        <activity android:name=".activity.ImageGridActivity" />
+        <activity android:name=".activity.TestPicActivity" />
+        <activity android:name=".activity.PhotoActivity" />
+        <activity android:name=".activity.ConfirmationOrderActivity" />
+        <activity android:name=".activity.TopicSearchDeatilsActivity" />
+        <activity android:name=".activity.SearchTopicActivity" />
+        <activity android:name=".activity.SearchShoppingActivity" />
+        <activity android:name=".activity.SearchDeatilsActivity" />
+        <activity android:name=".activity.ApplyRefundActivity" />
+        <activity android:name=".activity.RefundscheduleActivity" />
+        <activity android:name=".activity.OrderDetailsActivity" />
+        <activity android:name=".activity.PlaceOrderActivity" />
+        <activity android:name=".activity.DivingDestiActivity" />
+        <activity android:name=".activity.DivingTripActivity" />
+        <activity android:name=".activity.PublishVideoActivity" />
+        <activity android:name=".activity.ExchangeIntegralDeatilsActivity" />
+        <activity android:name=".activity.ApplyforRefundActivity" />
+        <activity android:name=".activity.EvaluateActivity" />
+        <activity android:name=".activity.DivingCertificateActivity" />
+        <activity android:name=".activity.DivingItineraryActivity" />
+        <activity android:name=".activity.MycertificateActivity" />
+        <activity android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.IntegralDeatlisActivity" />
+        <activity android:name=".activity.TopicDetailsActivity" />
+        <activity android:name=".activity.MyDynamicDetailsPersonActivity" />
+        <activity android:name=".activity.DynamicDetailsActivity" />
+        <activity android:name=".activity.ConversationActivity" />
+        <activity android:name=".activity.LocationActivity" />
+        <activity android:name=".activity.PublishDynamicActivity" />
+        <activity android:name=".activity.MyClubActivity" />
+        <activity android:name=".activity.LikeActivity" />
+        <activity android:name=".activity.CommentActivity" />
+        <activity android:name=".activity.MessageActivity" />
+        <activity android:name=".activity.SystemMessageActivity" />
+        <activity android:name=".activity.UpdatePhoneActivity" />
+        <activity android:name=".activity.PersonalDataActivity" />
+        <activity android:name=".activity.MySubordinatesActivity" />
+        <activity android:name=".activity.MyCommissionActivity" />
+        <activity android:name=".activity.IntegralBillActivity" />
+        <activity android:name=".activity.MyOrder" />
+        <activity android:name=".activity.MyIntegralActivity" />
+        <activity android:name=".activity.AttentionActivity" />
+        <activity android:name=".activity.CashWithdrawalActivity" />
+        <activity android:name=".activity.MyWalletActivity" />
+        <activity android:name=".activity.ConversationDetailsActivity" />
+        <activity android:name=".activity.InformationActivity" />
+        <activity android:name=".activity.ChooseProductActivity" />
+        <activity android:name=".activity.EditActivity" />
+        <activity android:name=".activity.AddAddressActivity" />
+        <activity android:name=".activity.AddressActivity" />
+        <activity android:name=".activity.CoachApplicationActivity" />
+        <activity android:name=".activity.IntegralActivity" />
+        <activity android:name=".activity.RestorationActivity" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".activity.SettingActivity" />
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.FindPasswordActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.HomeActivity" />
+        <activity android:name=".activity.VerificationLoginActivity" />
+        <activity android:name=".activity.UpdatePasswordActivity" />
+        <activity android:name=".activity.UpdatePayPasswordActivity" />
+        <activity android:name=".activity.SearchActivity" /> <!-- 广播 检测网络状态 -->
+        <receiver android:name=".utils.NetBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.NET.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.Net.wifi.WIFI_STATE_CHANGED" />
+                <action android:name="android.net.wifi.STATE_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.DiveLogActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths_public" />
+        </provider>
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="7220d86275a43bbfe633674e7d4b3262" />
+
+        <service android:name="com.amap.api.location.APSService" />
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+
+        <!-- 若您的业务中有使用极光富媒体功能，或者极光早上好功能，需要把此 Activity 的 exported 修改成 true 覆盖 jcenter 上的组件。 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:exported="true"
+            tools:node="replace"
+            android:theme="@style/MyDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="cn.jpush.android.ui.PopWinActivity" />
+                <category android:name="com.example.edive" />
+            </intent-filter>
+        </activity>
+
+        <!-- 若您的业务中有使用极光富媒体功能，或者极光早上好功能，需要把此 Activity 的 exported 修改成 true 覆盖 jcenter 上的组件。 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            tools:node="replace"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.example.edive" />
+            </intent-filter>
+        </activity>
+
+        <!-- Since JCore2.0.0 Required SDK核心功能-->
+        <!-- 可配置android:process参数将Service放在其他进程中；android:enabled属性不能是false -->
+        <!-- 这个是自定义Service，要继承极光JCommonService，可以在更多手机平台上使得推送通道保持的更稳定 -->
+        <service android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+        <!-- Required since 3.0.7 -->
+        <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
+        <!-- 3.3.0开始所有事件将通过该类回调 -->
+        <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
+        <receiver
+            android:name=".service.UserService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+                <category android:name="com.example.edive" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

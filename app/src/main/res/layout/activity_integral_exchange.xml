@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/Setting_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.IntegralExchangeActivity">
+    <com.example.edive.design.CommonTitle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleText="积分兑换"
+        app:backImage="@mipmap/icon_back"
+        app:canBack="true"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/findpassword_bg"
+        android:layout_height="wrap_content">
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:layout_width="match_parent"
+            app:tabBackground="@drawable/select_tab"
+            app:tabTextColor="@color/white"
+            app:tabIndicatorHeight="@dimen/dp_0"
+            android:layout_height="@dimen/dp_36"/>
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

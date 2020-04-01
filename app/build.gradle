@@ -1,0 +1,149 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId "com.example.edive"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }
+        manifestPlaceholders = [
+                XG_ACCESS_ID:"1500003652",
+                XG_ACCESS_KEY : "AF5MWNPDSHNZ",
+                JPUSH_PKGNAME :"com.example.edive",
+                JPUSH_APPKEY : "a1a1b58ce3ec35a95dab1858", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        signingConfigs {
+            debug {
+                storeFile file('debug.keystore')
+                storePassword "android"
+                keyAlias "androiddebugkey"
+                keyPassword "android"
+            }
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$supportVsersion"
+    implementation "com.android.support:cardview-v7:$supportVsersion"
+    implementation "com.android.support:support-v4:$supportVsersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation "com.android.support:design:$supportVsersion"
+    implementation "com.android.support:support-v4:$supportVsersion"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+
+    //noinspection GradleDependency
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.4'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+
+    //配合Rxjava
+    implementation "com.jakewharton:butterknife:$butterknife"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknife"
+    implementation "com.flyco.tablayout:FlycoTabLayout_Lib:$tablayout"
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'
+    implementation "com.squareup.okhttp3:okhttp:$okhttp3"
+    implementation "com.squareup.okhttp3:logging-interceptor:$ok3log"
+
+    //noinspection GradleDependency
+    implementation 'com.google.code.gson:gson:2.2.4'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation "fm.jiecao:jiecaovideoplayer:$jiecao"
+
+    //noinspection GradleDependency
+    implementation 'com.hjq:xxpermissions:5.2'
+
+    //noinspection GradleDependency
+    debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakCanary"
+    releaseImplementation "com.squareup.leakcanary:leakcanary-android-no-op:$leakCanary"
+    implementation "com.scwang.smartrefresh:SmartRefreshLayout:$smartRefresh"
+
+    //粘性头部/悬浮头
+
+    //    implementation 'com.github.qdxxxx:StickyHeaderDecoration:1.0.1'
+
+    //竖直tab
+    implementation 'q.rorbin:VerticalTabLayout:1.2.5'
+    implementation "com.scwang.smartrefresh:SmartRefreshHeader:$smartRefresh"
+
+    //noinspection GradleDependency
+    implementation 'org.jsoup:jsoup:1.10.2'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.github.chrisbanes.photoview:library:1.2.4'
+    implementation 'top.zibin:Luban:1.1.8'
+    implementation 'xstream:xstream:1.2.2'
+
+    //WeChat
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+    implementation files('libs/fastjson-1.2.41.jar')
+    api 'com.miguelcatalan:materialsearchview:1.+'
+    implementation 'org.jetbrains:annotations-java5:15.0'
+    implementation project(':takephoto')
+    implementation project(':widget')
+//    implementation project(':tuikit')
+//    api 'com.tencent.imsdk:imsdk:4.6.51'
+    implementation 'com.jaeger.statusbaruitl:library:1.1.1'
+    implementation 'jp.wasabeef:glide-transformations:4.0.0'
+    api 'com.sackcentury:shinebutton:0.2.0'
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation files('libs/AMap_Location_V4.7.2_20190927.jar')
+    implementation files('libs/AMap2DMap_5.2.0_AMapSearch_7.1.0_20191030.jar')
+    implementation 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
+    implementation 'com.github.zrunker:ZViewPager:v1.0.4'
+    implementation 'com.github.zyyoona7:wheelview:1.0.7'
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'liji.library.dev:citypickerview:5.0.0'
+    implementation 'com.yanzhenjie:album:2.1.3'
+    implementation 'com.github.wanglu1209:PhotoViewer:0.50'
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    implementation 'com.tencent.jg:jg:1.1'
+    implementation 'com.tencent.tpns:tpns:1.1.5.2-release'
+    implementation 'com.wgd.gdcp.gdcplibrary:ImageCompress:1.0.10'
+
+    implementation 'cn.jiguang.sdk:jpush:3.5.4'  // 此处以JPush 3.5.4 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.2.6'  // 此处以JCore 2.2.6 版本为例。
+
+    implementation files('libs/SecurityEnvSDK-release-1.1.0.jar')
+    implementation files('libs/umeng-common-2.1.8.jar')
+    implementation files('libs/umeng-share-core-6.9.6.jar')
+    implementation files('libs/umeng-share-QQ-simplify-6.9.6.jar')
+    implementation files('libs/umeng-share-sina-simplify-6.9.6.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.6.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.6.jar')
+}

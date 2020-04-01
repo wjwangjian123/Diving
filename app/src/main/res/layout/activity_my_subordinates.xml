@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Setting_bg"
+    android:layout_height="match_parent"
+    tools:context=".activity.MySubordinatesActivity">
+    <com.example.edive.design.CommonTitle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canBack="true"
+        app:backImage="@mipmap/icon_back"
+        app:titleText="我的下级"
+        />
+    <RelativeLayout
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_width="match_parent"
+        android:background="@mipmap/icon_myint_bg"
+        android:layout_height="@dimen/dp_60">
+        <TextView
+            android:id="@+id/subordinatesnum"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            android:text="下级总人数：45人"
+            android:layout_centerVertical="true"
+            />
+    </RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

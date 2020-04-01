@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Setting_bg"
+    android:orientation="vertical"
+    tools:context=".activity.RestorationActivity">
+    <com.example.edive.design.CommonTitle
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canBack="true"
+        app:titleText="@string/restoration"
+        app:backImage="@mipmap/icon_back"
+        />
+    <ImageView
+        android:id="@+id/iv_hyvideo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bghysp"
+        />
+    <ImageView
+        android:id="@+id/iv_hyphoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/bghyzp"
+        />
+</LinearLayout>

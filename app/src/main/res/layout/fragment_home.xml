@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/Setting_bg"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+    <ScrollView
+        android:id="@+id/scro_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
+        <RelativeLayout
+            android:descendantFocusability="blocksDescendants"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rec"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_500"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                tools:ignore="UnusedAttribute" />
+
+            <android.support.design.widget.TabLayout
+                android:layout_below="@id/rec"
+                android:id="@+id/home_tabs"
+                app:tabTextColor="@color/clolratabs"
+                app:tabSelectedTextColor="@color/white"
+                android:layout_width="@dimen/dp_170"
+                android:layout_height="@dimen/dp_35" />
+
+            <com.example.edive.design.PersonalViewpager
+                android:id="@+id/homevp"
+                android:layout_below="@id/home_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

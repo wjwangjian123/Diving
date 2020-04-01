@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/rl"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/dp_0_5"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_height="@dimen/dp_100"
+            android:layout_alignBottom="@id/tv_message"
+            android:layout_below="@id/tv_yuan"
+            android:background="@color/colorAccent"
+            />
+        <View
+            android:id="@+id/vvvvv"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_width="@dimen/dp_0_5"
+            android:layout_height="@dimen/dp_5"
+            android:background="@color/colorAccent"
+                />
+        <TextView
+            android:id="@+id/tv_yuan"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:background="@drawable/yuans"
+            />
+        <TextView
+            android:layout_toRightOf="@id/tv_yuan"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:id="@+id/tv_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:textColor="@color/white"
+            android:text="111111111111"
+            />
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/sp_12"
+            android:textColor="#FF9EA9B6"
+            android:layout_below="@id/tv_date"
+            android:layout_toRightOf="@id/tv_yuan"
+            />
+
+
+</RelativeLayout>
