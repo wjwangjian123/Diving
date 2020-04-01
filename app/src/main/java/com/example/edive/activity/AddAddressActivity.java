@@ -35,7 +35,7 @@ import okhttp3.MediaType;
 import okhttp3.RequestBody;
 
 /**
- * 地址
+ * 地址111
  */
 public class AddAddressActivity extends BaseMvpActivity<HomeModel> {
 
@@ -58,6 +58,7 @@ public class AddAddressActivity extends BaseMvpActivity<HomeModel> {
     private String provinces = "";
     private String citys = "";
     private String districts = "";
+    private String districts1 = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -221,4 +222,6 @@ public class AddAddressActivity extends BaseMvpActivity<HomeModel> {
         });
 
     }
+
+
 }
