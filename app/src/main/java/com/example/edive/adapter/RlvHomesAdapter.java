@@ -62,7 +62,6 @@ public class RlvHomesAdapter extends RecyclerView.Adapter<RlvHomesAdapter.ViewHo
                     int linkType = list.get(position).getLinkType();
                     String url = list.get(position).getUrl();
                     int isJump = list.get(position).getIsJump();
-
                     Integer integer = Integer.valueOf(url);
                     if (isJump == 0) {
 

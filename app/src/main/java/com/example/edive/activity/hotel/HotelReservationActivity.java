@@ -1,9 +1,13 @@
 package com.example.edive.activity.hotel;
 
+import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -16,6 +20,7 @@ import com.example.edive.frame.BaseMvpActivity;
 import com.lljjcoder.widget.RecycleViewDividerForList;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * 酒店预订
@@ -49,6 +54,11 @@ public class HotelReservationActivity extends BaseMvpActivity {
 
     @Override
     public void initView() {
+        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT)
+        {
+            getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+        }
         linearLayoutManager1 = new LinearLayoutManager(this);
         linearLayoutManager1.setOrientation(LinearLayoutManager.HORIZONTAL);
         linearLayoutManager2 = new LinearLayoutManager(this);
@@ -66,7 +76,16 @@ public class HotelReservationActivity extends BaseMvpActivity {
     public void initData() {
 
     }
+    @OnClick({R.id.button_search})
+    public  void onClick(View view){
+        switch (view.getId()){
+            case R.id.button_search:{
+                startActivity(new Intent(this,HotelSearchActivity.class));
+                break;
+            }
+        }
 
+    }
     @Override
     public Object getModel() {
         return null;

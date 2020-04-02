@@ -28,6 +28,7 @@ public class CommonTitle extends RelativeLayout {
     public ImageView mBackBtn;
     private RelativeLayout mTitleRl;
     private final int mBackColor;
+    private final int mTvTitleColor;
 
     public CommonTitle(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -40,6 +41,7 @@ public class CommonTitle extends RelativeLayout {
             mBackImage = ta.getResourceId(R.styleable.CommonTitle_backImage, 0);
             mMoreText = ta.getString(R.styleable.CommonTitle_moreText);
             mBackColor = ta.getColor(R.styleable.CommonTitle_backColor, ContextCompat.getColor(context, R.color.app_setting));
+            mTvTitleColor = ta.getColor(R.styleable.CommonTitle_titleTextColor, ContextCompat.getColor(context, R.color.white));
             setUpView(context);
         } finally {
             ta.recycle();
@@ -53,6 +55,7 @@ public class CommonTitle extends RelativeLayout {
         mTitleRl.setBackgroundColor(mBackColor);
         mTvTitle = findViewById(R.id.title_content);
         mTvTitle.setText(mTitle);
+        mTvTitle.setTextColor(mTvTitleColor);
         mBackBtn = findViewById(R.id.back_image);
         mBackBtn.setImageResource(mBackImage);
 //        mBackBtn.setVisibility(mCanBack ? VISIBLE : INVISIBLE);

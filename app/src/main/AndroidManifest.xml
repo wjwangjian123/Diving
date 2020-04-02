@@ -63,7 +63,10 @@
         android:usesCleartextTraffic="true"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning,UnusedAttribute"
         tools:replace="android:theme">
-        <activity android:name=".activity.hotel.HotelReservationActivity"></activity>
+        <activity android:name=".activity.equipmentzone.ProductEvaluationActivity"></activity>
+        <activity android:name=".activity.hotel.HotelDetailsActivity" />
+        <activity android:name=".activity.hotel.HotelSearchActivity" />
+        <activity android:name=".activity.hotel.HotelReservationActivity" />
         <activity android:name=".activity.ShowVideoActivity" />
         <activity android:name=".activity.AllraiseMessagerListActivity" />
         <activity android:name=".activity.UserPersonDestialsActivity" />
